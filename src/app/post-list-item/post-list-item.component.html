@@ -1,0 +1,16 @@
+<!-- <p>post-list-item works!</p> -->
+
+<li [ngClass]="(getColorList())" [ngStyle]="{color: getColorFont()}">
+
+  <div style="display: flex;
+    justify-content: space-between;">
+    <h3>{{postTitle}}</h3>
+    <p>{{postDate | date: 'MM/dd/yyyy, h:mm a'}}</p>
+  </div>
+
+  <p>{{postContent}}</p>
+
+  <!-- <p>{{postLoveIts}}</p> -->
+  <button class='btn btn-success' (click)='onLoveIt()'>Love it!</button>
+  <button class='btn btn-danger' (click)='onDislikeIt()'>Dont't love it!</button>
+</li>
